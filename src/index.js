@@ -11,7 +11,7 @@ const tabHandler = (function () {
     const contactButton = document.querySelector("#cbutton");
     const nav = document.querySelector("nav");
 
-    nav.addEventListener("click", e => {
+    nav.addEventListener("focusin", e => {
         if (e.target === homeButton) {
             clearContent();
             homeLoad();
@@ -25,6 +25,20 @@ const tabHandler = (function () {
             contactLoad();
         }
     })
+    // nav.addEventListener("click", e => {
+    //     if (e.target === homeButton) {
+    //         clearContent();
+    //         homeLoad();
+    //     }
+    //     else if (e.target === menuButton) {
+    //         clearContent();
+    //         menuLoad();
+    //     }
+    //     else if (e.target === contactButton) {
+    //         clearContent();
+    //         contactLoad();
+    //     }
+    // })
 
     function clearContent() {
         if (content.firstElementChild)
@@ -33,7 +47,6 @@ const tabHandler = (function () {
             alert("For some reason, there wasn't content to delete");
     }
 
-    // homeLoad();
-    menuLoad();
+    homeLoad();
 
 })();
