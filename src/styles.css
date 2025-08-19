@@ -1,0 +1,45 @@
+#menu {
+    display: flex;
+    min-height: 60vh;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#menu li, #menu h3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em;
+}
+
+#menu li {
+    font-size: large;
+    color: green;
+}
+
+#content {
+    width: clamp(300px, 50%, 1200px);
+    text-align: center;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    margin-bottom: 3em;
+}
+
+nav button {
+    padding: 1em;
+    background-color: aquamarine;
+}
+
+nav button:focus {
+    box-sizing: border-box;
+    border: 5px yellow solid;
+}
